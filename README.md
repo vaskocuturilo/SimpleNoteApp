@@ -3,7 +3,7 @@ This is simple note application with REST API and database
 
 ## Test scenario:
 - Create simple application for create notes.
-- Create function al for work with backend from application.
+- Create functional for work with backend from application.
 - Create automation scripts for application.
 - Generate report after running automation scripts. 
     
