@@ -1,7 +1,7 @@
 # The simple note application.
 This is simple note application with REST API and database
 
-![](https://raw.githubusercontent.com/Alamofire/Alamofire/master/Resources/AlamofireLogo.png)
+![](https://camo.githubusercontent.com/f59b3a63047a9581ef03ffecb44093c9d88157248ebeab88dd58d2b9dc6b0427/68747470733a2f2f632e726164696b616c2e72752f6331382f323130362f30362f3333323637373436363038612e706e67)
 
 ## Test scenario:
 - Create simple application for create notes.
@@ -18,6 +18,8 @@ This is simple note application with REST API and database
 **Note**: please put your code in public repository.
 
 **Note**: Please send link to this repo when you are done.
+
+**Note**: Please use this backend server (https://github.com/vaskocuturilo/Server-Note-App).
 
 
 You will need the following technologies available to try it out:
