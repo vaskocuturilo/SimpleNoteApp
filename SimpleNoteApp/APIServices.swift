@@ -21,13 +21,16 @@ class APIServices {
     static let functions  = APIServices()
     
     func getNotesInformation() {
-
-        AF.request("http://localhost:5000/api/fetch/").response { response in
-            
-            print(response.data!)
-            
+        AF.request(Constants.Endpoints.fetch).response { response in
             let data = String(data: response.data!, encoding: .utf8)
             self.delegate?.updateArray(newArray: data!)
         }
+    }
+    
+    func createNewNote(date: String, title: String, note: String){
+        AF.request(Constants.Endpoints.create, method: .post,
+                   parameters: ["title": title, "date": date, "note": note], encoding: JSONEncoding.default).responseJSON {
+                    response in
+                   }
     }
 }
