@@ -11,5 +11,7 @@ struct Constants {
     struct Endpoints {
         static let fetch = "http://localhost:5000/api/fetch"
         static let create = "http://localhost:5000/api/create"
+        static let update = "http://localhost:5000/api/update"
+        static let remove = "http://localhost:5000/api/remove"
     }
 }
