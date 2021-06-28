@@ -20,7 +20,7 @@ class APIServices {
     var delegate: DataDelegate?
     static let functions  = APIServices()
     
-    func getAllNotesInformation() {
+    func getNotesInformation() {
 
         AF.request("http://localhost:5000/api/fetch/").response { response in
             
