@@ -27,18 +27,24 @@ class APIServices {
         }
     }
     
-    public func createNewNote(date: String, title: String, note: String){
+    public func createNewNote(date: String, title: String, note: String) {
         AF.request(Constants.Endpoints.create, method: .post,
                    parameters: ["title": title, "date": date, "note": note], encoding: JSONEncoding.default).responseJSON {
                     response in
                    }
     }
     
-    public func updateNote(date: String, title: String, note: String, id: String){
+    public func updateNote(date: String, title: String, note: String, id: String) {
         
         AF.request(Constants.Endpoints.update, method: .post, parameters: ["title": title, "date": date, "note": note, "_id": id], encoding: JSONEncoding.default).responseJSON {
             response in
         }
         
+    }
+    
+    public func removeNote(id: String) {
+        AF.request(Constants.Endpoints.remove, method: .post, parameters: ["id": id], encoding: URLEncoding(destination: .queryString)).responseJSON {
+            response in
+        }
     }
 }
