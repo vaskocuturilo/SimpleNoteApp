@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         APIServices.functions.delegate = self
-        APIServices.functions.getAllNotesInformation()
+        APIServices.functions.getNotesInformation()
         print(notesArray)
         
         notesTableView.delegate = self
@@ -43,7 +43,7 @@ extension ViewController: DataDelegate {
         do {
             notesArray = try JSONDecoder().decode([Note].self, from: newArray.data(using: .utf8)!)
         }catch {
-            print("Failed to decode")
+            print("Failed to decode JSON string.")
         }
         self.notesTableView.reloadData()
     }
