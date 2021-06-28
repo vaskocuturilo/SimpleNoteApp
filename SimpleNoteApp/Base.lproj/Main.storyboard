@@ -58,7 +58,7 @@
         <!--Add Note-->
         <scene sceneID="UZn-9s-hRw">
             <objects>
-                <viewController id="nG2-0U-Iw3" sceneMemberID="viewController">
+                <viewController id="nG2-0U-Iw3" customClass="AddNoteViewController" customModule="SimpleNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="561-bY-lb8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,12 +93,20 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Save" id="hVp-J6-hja">
                                 <color key="tintColor" systemColor="systemGreenColor"/>
+                                <connections>
+                                    <action selector="addNewNote:" destination="nG2-0U-Iw3" id="SzK-tm-UPt"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem title="Delete" id="kgp-cT-JcS">
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bodyNoteView" destination="rlm-cD-rH7" id="Zdp-TC-I9V"/>
+                        <outlet property="saveButton" destination="hVp-J6-hja" id="pEx-hP-7uQ"/>
+                        <outlet property="titleField" destination="Cnj-p5-ODT" id="CJf-RG-CoR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUP-Bx-pfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

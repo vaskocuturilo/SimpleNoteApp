@@ -15,6 +15,8 @@
 		7200811026848EDE00BB8DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7200810E26848EDE00BB8DFC /* LaunchScreen.storyboard */; };
 		7200811B26848EDE00BB8DFC /* SimpleNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200811A26848EDE00BB8DFC /* SimpleNoteAppTests.swift */; };
 		7200812626848EDE00BB8DFC /* SimpleNoteAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200812526848EDE00BB8DFC /* SimpleNoteAppUITests.swift */; };
+		72682BA22689D37800344024 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72682BA12689D37800344024 /* Constants.swift */; };
+		72682BA72689D3B000344024 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72682BA62689D3B000344024 /* AddNoteViewController.swift */; };
 		72886A132688DDA700D1BAC1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 72886A122688DDA700D1BAC1 /* Alamofire */; };
 		72886A182688DDF200D1BAC1 /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72886A172688DDF200D1BAC1 /* APIServices.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,8 @@
 		7200812126848EDE00BB8DFC /* SimpleNoteAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleNoteAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7200812526848EDE00BB8DFC /* SimpleNoteAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNoteAppUITests.swift; sourceTree = "<group>"; };
 		7200812726848EDE00BB8DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72682BA12689D37800344024 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		72682BA62689D3B000344024 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		72886A172688DDF200D1BAC1 /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +115,8 @@
 				7200810E26848EDE00BB8DFC /* LaunchScreen.storyboard */,
 				7200811126848EDE00BB8DFC /* Info.plist */,
 				72886A172688DDF200D1BAC1 /* APIServices.swift */,
+				72682BA12689D37800344024 /* Constants.swift */,
+				72682BA62689D3B000344024 /* AddNoteViewController.swift */,
 			);
 			path = SimpleNoteApp;
 			sourceTree = "<group>";
@@ -269,7 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72682BA22689D37800344024 /* Constants.swift in Sources */,
 				7200810826848EDD00BB8DFC /* ViewController.swift in Sources */,
+				72682BA72689D3B000344024 /* AddNoteViewController.swift in Sources */,
 				7200810426848EDD00BB8DFC /* AppDelegate.swift in Sources */,
 				72886A182688DDF200D1BAC1 /* APIServices.swift in Sources */,
 				7200810626848EDD00BB8DFC /* SceneDelegate.swift in Sources */,
