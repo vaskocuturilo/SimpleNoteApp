@@ -13,6 +13,18 @@ protocol DataDelegate {
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var notesArray = [Note]()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController = segue.destination as! AddNoteViewController
+        
+        if segue.identifier == "updateNote" {
+            viewController.note = notesArray[notesTableView.indexPathForSelectedRow!.row]
+            viewController.update = true
+        }
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notesArray.count
     }
@@ -21,6 +33,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCell", for: indexPath)
         cell.textLabel?.text = notesArray[indexPath.row].title
         return cell
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        APIServices.functions.getNotesInformation()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        APIServices.functions.getNotesInformation()
     }
     
     
