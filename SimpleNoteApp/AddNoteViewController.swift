@@ -15,7 +15,7 @@ class AddNoteViewController: UIViewController {
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var bodyNoteView: UITextView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    
+    @IBOutlet weak var deleteButton: UIBarButtonItem!
     
     @IBAction func addNewNote(_ sender: Any) {
         if update == true {
@@ -24,6 +24,29 @@ class AddNoteViewController: UIViewController {
             APIServices.functions.createNewNote(date: "placeholder", title: titleField.text!, note: bodyNoteView.text)
         }
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func removeNote(_ sender: Any) {
+        
+        let refreshAlert = UIAlertController(title: "Delete", message: "Are you sure you want to remove this note?", preferredStyle: UIAlertController.Style.alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            APIServices.functions.removeNote(id: self.note!._id)
+            self.navigationController?.popViewController(animated: true)
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if update == false {
+            self.deleteButton.isEnabled = false
+            self.deleteButton.title = ""
+        }
     }
     
     override func viewDidLoad() {

@@ -94,18 +94,22 @@
                     <navigationItem key="navigationItem" title="Add Note" id="56h-kI-Ul0">
                         <rightBarButtonItems>
                             <barButtonItem title="Save" id="hVp-J6-hja">
-                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
                                 <connections>
                                     <action selector="addNewNote:" destination="nG2-0U-Iw3" id="SzK-tm-UPt"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Delete" id="kgp-cT-JcS">
                                 <color key="tintColor" systemColor="systemPinkColor"/>
+                                <connections>
+                                    <action selector="removeNote:" destination="nG2-0U-Iw3" id="ZzM-3S-vGB"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="bodyNoteView" destination="rlm-cD-rH7" id="Zdp-TC-I9V"/>
+                        <outlet property="deleteButton" destination="kgp-cT-JcS" id="4k0-iz-1ah"/>
                         <outlet property="saveButton" destination="hVp-J6-hja" id="pEx-hP-7uQ"/>
                         <outlet property="titleField" destination="Cnj-p5-ODT" id="CJf-RG-CoR"/>
                     </connections>
@@ -143,8 +147,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
